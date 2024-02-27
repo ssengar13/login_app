@@ -4,23 +4,23 @@ import avatar from '../assets/profile.png';
 import styles from '../styles/Username.module.css';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
-import { usernameValidate } from '../helper/validate.js'
+import { passwordValidate } from '../helper/validate.js'
 
 export default function Password() {
 
   const formik = useFormik({
     initialValues: {
-      username: ''
+      password: ''
     },
-    validate: usernameValidate,
+    validate: passwordValidate,
     validateOnChange: false,
     validateOnBlur: false,
     onSubmit: async values => {
       console.log(values)
     }
   })
-
   return (
+
 <div className="container mx-auto">
 
 <Toaster position='top-center' reverseOrder={false}></Toaster>
@@ -41,12 +41,12 @@ export default function Password() {
         </div>
 
         <div className="textbox flex flex-col items-center gap-6">
-            <input {...formik.getFieldProps('username')} className={styles.textbox} type="text" placeholder='Username' />
-            <button className={styles.btn} type='submit'>Let's Go</button>
+            <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Password' />
+            <button className={styles.btn} type='submit'>Sign In</button>
         </div>
 
         <div className="text-center py-4">
-          <span className='text-gray-500 text-sm'>Not a Member <Link className='text-red-500 text-sm' to="/register">Register Now</Link></span>
+          <span className='text-gray-500 text-sm'>Forgot Password?<Link className='text-red-500 text-sm' to="/recovery"> Recover Now</Link></span>
         </div>
 
     </form>
