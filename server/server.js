@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
     res.status(201).json("Home GET Request");
 })
 
+/** api Routes */
+app.use('/api', router)
+
 
 /** Start Server only when we have valid connection */
 connect().then(() => {
