@@ -76,7 +76,7 @@ export async function register(req,res){
     }
 
 }
-
+2
 
 
 /** POST: http://localhost:3000/api/login 
