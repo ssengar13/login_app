@@ -16,7 +16,7 @@ export default function Profile() {
     initialValues: {
       firstName: '',
       lastName: '',
-      email: 'sonal@gmail.com',
+      email: '',
       mobile: '',
       address: ''
     },
